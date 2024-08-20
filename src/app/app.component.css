@@ -1,0 +1,46 @@
+/* In your styles.css or component-specific stylesheet */
+a {
+    cursor: pointer;  /* Ensure the cursor indicates a clickable link */
+    text-decoration: none;  /* Style as needed */
+  }
+  
+  nav ul {
+    list-style-type: none;  /* Remove bullet points */
+  }
+  
+  nav li {
+    display: inline;  /* Display list items inline */
+    margin-right: 10px;  /* Space between items */
+  }
+
+  nav li a{
+    color: aliceblue;
+  }
+
+  nav li a:hover{
+    color: rgb(236, 123, 202);
+  }
+
+  .header {
+    background-color: #0a5588;
+    padding: 1px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .navbar-nav {
+    flex: 1; /* Allow the nav items to grow */
+    justify-content: space-evenly; /* Distribute space evenly */
+    margin-left: 35%;
+    margin-top: 2%;
+  }
+  .nav-item {
+    flex: 1; /* Ensure each nav item takes up equal space */
+  }
+  .nav-link {
+    text-align: center; /* Center text in each nav item */
+  }

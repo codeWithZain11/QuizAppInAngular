@@ -1,0 +1,11 @@
+<div class="question-form"> 
+  <label>Question {{ index + 1 }}</label>
+  <input [(ngModel)]="question.text" placeholder="Enter question" />
+
+  <div>
+    <label>Answer:</label>
+    <input [(ngModel)]="question.answer" placeholder="Enter answer" />
+  </div>
+
+  <button (click)="removeQuestion()">Remove Question</button>
+</div>

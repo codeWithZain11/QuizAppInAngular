@@ -1,0 +1,23 @@
+<h2> &nbsp;&nbsp; Review Quiz</h2>
+<br><br>
+<div class="container">
+  <div class="create-quiz-container" style="max-height: 200px; overflow-y: auto;">
+    <div class="form-group">
+<div *ngIf="quizCompleted">
+  <h2>Quiz Results</h2>
+  <ul>
+    <li *ngFor="let result of results">
+      <p>Question: {{ result.question }}</p>
+      <p>Your Answer: {{ result.userAnswer }}</p>
+      <p *ngIf="result.correct" class="text-success">Correct!</p>
+      <p *ngIf="!result.correct" class="text-danger">Wrong! Correct Answer: {{ result.correctAnswer }}</p>
+    </li>
+  </ul>
+  &nbsp;&nbsp;&nbsp;  <button (click)="reviewQuiz()" class="btn btn-primary">Review Quiz</button>
+</div>
+<div *ngIf="!quizCompleted" class="no-results-message">
+  <p>No quiz results to review yet.</p>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,8 @@
+<div *ngIf="quizCompleted">
+    <h2>Quiz Results</h2>
+    <div *ngFor="let result of results">
+      <p [ngClass]="{'correct': result.correct, 'wrong': !result.correct}">
+        {{ result.question }} - {{ result.userAnswer }}
+      </p>
+    </div>
+  </div>

@@ -1,0 +1,21 @@
+<h2> &nbsp;&nbsp; Take Quiz</h2>
+<br><br>
+<div class="container">
+  <div class="create-quiz-container" style="max-height: 400px; overflow-y: auto;">
+    <div class="form-group">
+<form (ngSubmit)="onSubmit()" style="height: 400px; overflow-y: auto;">
+  <div *ngFor="let question of quiz; let i = index">
+    <label for="question{{i}}">Question {{ i + 1 }}: {{ question.text }}</label>
+    <input
+      [(ngModel)]="userAnswers[i]"
+      name="answer{{i}}"
+      placeholder="Enter your answer"
+    />
+    <br><br>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit Quiz</button>
+</form>
+    </div>
+  </div>
+</div>
